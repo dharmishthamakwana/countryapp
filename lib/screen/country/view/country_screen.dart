@@ -38,11 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
           elevation: 0,
           title: Text(
             "Country List",
-            style: TextStyle(color: Colors.black, fontSize: 25),
+            style: TextStyle(color: Colors.white, fontSize: 25),
           ),
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
         ),
+        backgroundColor: Colors.black,
         body: ListView.builder(
           itemCount: homeScreenProviderfalse!.CountryList.length,
           itemBuilder: (context, index) {
@@ -53,41 +54,32 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  height: 80,
-                  width: 80,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
-                    // border: Border.all(color: Colors.black),
+                    color: Colors.white38,
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        height: 80,
-                        width: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: Colors.black),
-                          color: Colors.black,
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Image.network(
-                            "${homeScreenProviderfalse!.CountryList[index].f1!.png}",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Text(
+                            '${homeScreenProviderfalse!.CountryList[index].flag}',
+                            style: TextStyle(fontSize: 55)),
+                      ),
+                      SizedBox(
+                        width: 9,
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(5),
                             child: Text(
-                              "${homeScreenProviderfalse!.CountryList[index].n1!.official}",
+                              "${homeScreenProviderfalse!.CountryList[index].n1!.common}",
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 18,
                               ),
                             ),
@@ -97,14 +89,16 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               "${homeScreenProviderfalse!.CountryList[index].status}",
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 18,
                               ),
                             ),
                           ),
                         ],
                       ),
-
+                      Spacer(),
+                      Icon(Icons.navigate_next_sharp,
+                          color: Colors.white, size: 40),
                     ],
                   ),
                 ),

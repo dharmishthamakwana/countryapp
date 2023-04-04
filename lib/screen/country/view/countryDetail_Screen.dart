@@ -30,143 +30,377 @@ class _DetailScreenState extends State<DetailScreen> {
           title: Text(
             "${homeScreenProviderfalse!.CountryList[index].n1!.official}",
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontSize: 25,
             ),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Stack(
           children: [
             Container(
-              height: 250,
+              height: 255,
               width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Colors.black45,
-                  borderRadius: BorderRadius.circular(10)),
+              color: Colors.white70,
               child: Image.network(
                 "${homeScreenProviderfalse!.CountryList[index].f1!.png}",
                 width: 200,
                 fit: BoxFit.cover,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 15),
-              child: Text(
-                "${homeScreenProviderfalse!.CountryList[index].n1!.official}",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 500,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.black),
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        children: [
+                          Text(
+                            '${homeScreenProviderfalse!.CountryList[index].n1!.official}',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
+                          ),
+                          SizedBox(height: 10,),
+                          Text(
+                              '${homeScreenProviderfalse!.CountryList[index].timezones}',
+                              style: TextStyle(color: Colors.white)),
+                          SizedBox(
+                            height: 20,
+                          ),
+                        ],
+                      ),
+                      Text("detailes:-  ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 25)),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("Country status    :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].status}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("area                       :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].area}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("landlocked           :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].landlocked}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("continents           :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].continents}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("startOfWeek        :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].startOfWeek}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("fifa                         :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].fifa}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("latlng                    :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].latlng}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("unMember           :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].unMember}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("independent         :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].independent}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("capital                   :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].capital}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("region                    :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].region}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("subregion              :- ",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22)),
+                                Text(
+                                    '${homeScreenProviderfalse!.CountryList![index].subregion}',
+                                    style: TextStyle(
+                                        color: Colors.white70, fontSize: 18)),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("alt:-",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 25)),
+                          Text(
+                              '${homeScreenProviderfalse!.CountryList[homeScreenProviderfalse!.i].f1!.alt}',
+                              style:
+                                  TextStyle(color: Colors.white70, fontSize: 18)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("flag:-        ",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 25)),
+                          Text(
+                              '${homeScreenProviderfalse!.CountryList[index].flag}',
+                              style:
+                              TextStyle(fontSize: 40)),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  // child: Text(
+                  //   "",
+                  //   style: TextStyle(
+                  //     fontSize: 25,
+                  //     fontWeight: FontWeight.bold,
+                  //   ),
+                  // ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 5),
-              child: Text(
-                "${homeScreenProviderfalse!.CountryList[index].n1!.common} City",
-                style: TextStyle(
-                  fontSize: 25,
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: 5),
-              child: Row(
-                children: [
-                  Text(
-                    "Country Status      :-    ",
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "${homeScreenProviderfalse!.CountryList[index].status}",
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: 5),
-              child: Row(
-                children: [
-                  Text(
-                    "Continenes            :-    ",
-                    style: TextStyle(fontSize: 18, color: Colors.black54),
-                  ),
-                  Text(
-                    "${homeScreenProviderfalse!.CountryList[index].region}",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: 5),
-              child: Row(
-                children: [
-                  Text(
-                    "Independent          :-    ",
-                    style: TextStyle(fontSize: 18, color: Colors.black54),
-                  ),
-                  Text(
-                    "${homeScreenProviderfalse!.CountryList[index].independent}",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: 5),
-              child: Row(
-                children: [
-                  Text(
-                    "Population             :-    ",
-                    style: TextStyle(fontSize: 18, color: Colors.black54),
-                  ),
-                  Text(
-                    "${homeScreenProviderfalse!.CountryList[index].population}",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: 5),
-              child: Row(
-                children: [
-                  Text(
-                    "Timezones             :-    ",
-                    style: TextStyle(fontSize: 18, color: Colors.black54),
-                  ),
-                  Text(
-                    "${homeScreenProviderfalse!.CountryList[index].timezones[0]}",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: 5),
-              child: Row(
-                children: [
-                  Text(
-                    "area                        :-    ",
-                    style: TextStyle(fontSize: 18, color: Colors.black54),
-                  ),
-                  Text(
-                    "${homeScreenProviderfalse!.CountryList[index].area}",
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                ],
-              ),
-            ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 20, top: 5),
+              //   child: Text(
+              //     "${homeScreenProviderfalse!.CountryList[index].n1!.common} City",
+              //     style: TextStyle(
+              //       fontSize: 25,
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(height: 20),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 20, top: 5),
+              //   child: Row(
+              //     children: [
+              //       Text(
+              //         "Country Status      :-    ",
+              //         style: TextStyle(
+              //             fontSize: 18,
+              //             color: Colors.black,
+              //             fontWeight: FontWeight.bold),
+              //       ),
+              //       Text(
+              //         "${}",
+              //         style: TextStyle(
+              //             fontSize: 18,
+              //             color: Colors.black,
+              //             fontWeight: FontWeight.bold),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 20, top: 5),
+              //   child: Row(
+              //     children: [
+              //       Text(
+              //         "Continenes            :-    ",
+              //         style: TextStyle(fontSize: 18, color: Colors.black54),
+              //       ),
+              //       Text(
+              //         "${homeScreenProviderfalse!.CountryList[index].region}",
+              //         style: TextStyle(fontSize: 18, color: Colors.black),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 20, top: 5),
+              //   child: Row(
+              //     children: [
+              //       Text(
+              //         "Independent          :-    ",
+              //         style: TextStyle(fontSize: 18, color: Colors.black54),
+              //       ),
+              //       Text(
+              //         "${homeScreenProviderfalse!.CountryList[index].independent}",
+              //         style: TextStyle(fontSize: 18, color: Colors.black),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 20, top: 5),
+              //   child: Row(
+              //     children: [
+              //       Text(
+              //         "Population             :-    ",
+              //         style: TextStyle(fontSize: 18, color: Colors.black54),
+              //       ),
+              //       Text(
+              //         "${homeScreenProviderfalse!.CountryList[index].population}",
+              //         style: TextStyle(fontSize: 18, color: Colors.black),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 20, top: 5),
+              //   child: Row(
+              //     children: [
+              //       Text(
+              //         "Timezones             :-    ",
+              //         style: TextStyle(fontSize: 18, color: Colors.black54),
+              //       ),
+              //       Text(
+              //         "${homeScreenProviderfalse!.CountryList[index].timezones[0]}",
+              //         style: TextStyle(fontSize: 18, color: Colors.black),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 20, top: 5),
+              //   child: Row(
+              //     children: [
+              //       Text(
+              //         "area                        :-    ",
+              //         style: TextStyle(fontSize: 18, color: Colors.black54),
+              //       ),
+              //       Text(
+              //         "${homeScreenProviderfalse!.CountryList[index].area}",
+              //         style: TextStyle(fontSize: 18, color: Colors.black),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+            )
           ],
         ),
       ),
