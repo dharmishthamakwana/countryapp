@@ -64,7 +64,6 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                         children: [
                           Text(
                             '${homeScreenProviderfalse!.CountryList[index].n1!.official}',
@@ -73,7 +72,9 @@ class _DetailScreenState extends State<DetailScreen> {
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18),
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Text(
                               '${homeScreenProviderfalse!.CountryList[index].timezones}',
                               style: TextStyle(color: Colors.white)),
@@ -117,7 +118,6 @@ class _DetailScreenState extends State<DetailScreen> {
                                         color: Colors.white70, fontSize: 18)),
                               ],
                             ),
-
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -261,8 +261,8 @@ class _DetailScreenState extends State<DetailScreen> {
                                   fontSize: 25)),
                           Text(
                               '${homeScreenProviderfalse!.CountryList[homeScreenProviderfalse!.i].f1!.alt}',
-                              style:
-                                  TextStyle(color: Colors.white70, fontSize: 18)),
+                              style: TextStyle(
+                                  color: Colors.white70, fontSize: 18)),
                         ],
                       ),
                       SizedBox(
@@ -278,128 +278,13 @@ class _DetailScreenState extends State<DetailScreen> {
                                   fontSize: 25)),
                           Text(
                               '${homeScreenProviderfalse!.CountryList[index].flag}',
-                              style:
-                              TextStyle(fontSize: 40)),
+                              style: TextStyle(fontSize: 40)),
                         ],
                       ),
                     ],
                   ),
-
-                  // child: Text(
-                  //   "",
-                  //   style: TextStyle(
-                  //     fontSize: 25,
-                  //     fontWeight: FontWeight.bold,
-                  //   ),
-                  // ),
                 ),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 20, top: 5),
-              //   child: Text(
-              //     "${homeScreenProviderfalse!.CountryList[index].n1!.common} City",
-              //     style: TextStyle(
-              //       fontSize: 25,
-              //     ),
-              //   ),
-              // ),
-              // SizedBox(height: 20),
-              // Padding(
-              //   padding: EdgeInsets.only(left: 20, top: 5),
-              //   child: Row(
-              //     children: [
-              //       Text(
-              //         "Country Status      :-    ",
-              //         style: TextStyle(
-              //             fontSize: 18,
-              //             color: Colors.black,
-              //             fontWeight: FontWeight.bold),
-              //       ),
-              //       Text(
-              //         "${}",
-              //         style: TextStyle(
-              //             fontSize: 18,
-              //             color: Colors.black,
-              //             fontWeight: FontWeight.bold),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.only(left: 20, top: 5),
-              //   child: Row(
-              //     children: [
-              //       Text(
-              //         "Continenes            :-    ",
-              //         style: TextStyle(fontSize: 18, color: Colors.black54),
-              //       ),
-              //       Text(
-              //         "${homeScreenProviderfalse!.CountryList[index].region}",
-              //         style: TextStyle(fontSize: 18, color: Colors.black),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.only(left: 20, top: 5),
-              //   child: Row(
-              //     children: [
-              //       Text(
-              //         "Independent          :-    ",
-              //         style: TextStyle(fontSize: 18, color: Colors.black54),
-              //       ),
-              //       Text(
-              //         "${homeScreenProviderfalse!.CountryList[index].independent}",
-              //         style: TextStyle(fontSize: 18, color: Colors.black),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.only(left: 20, top: 5),
-              //   child: Row(
-              //     children: [
-              //       Text(
-              //         "Population             :-    ",
-              //         style: TextStyle(fontSize: 18, color: Colors.black54),
-              //       ),
-              //       Text(
-              //         "${homeScreenProviderfalse!.CountryList[index].population}",
-              //         style: TextStyle(fontSize: 18, color: Colors.black),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.only(left: 20, top: 5),
-              //   child: Row(
-              //     children: [
-              //       Text(
-              //         "Timezones             :-    ",
-              //         style: TextStyle(fontSize: 18, color: Colors.black54),
-              //       ),
-              //       Text(
-              //         "${homeScreenProviderfalse!.CountryList[index].timezones[0]}",
-              //         style: TextStyle(fontSize: 18, color: Colors.black),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.only(left: 20, top: 5),
-              //   child: Row(
-              //     children: [
-              //       Text(
-              //         "area                        :-    ",
-              //         style: TextStyle(fontSize: 18, color: Colors.black54),
-              //       ),
-              //       Text(
-              //         "${homeScreenProviderfalse!.CountryList[index].area}",
-              //         style: TextStyle(fontSize: 18, color: Colors.black),
-              //       ),
-              //     ],
-              //   ),
-              // ),
             )
           ],
         ),
